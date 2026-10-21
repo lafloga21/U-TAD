@@ -140,7 +140,7 @@ c) \(47 + 15\)
 
 Realiza las siguientes operaciones binarias:
 
-a) \(1100010100 - 110101\) = 111101011
+a) 1100010100 - 110101 = 111101011
 
 | 1 | 1 | 0 | 0 | 0 | 1 | 0 | 1 | 0 |0 |
 |---|---|---|---|---|---|---|---|---|---
@@ -149,36 +149,84 @@ a) \(1100010100 - 110101\) = 111101011
 |---|---|---|---|---|---|---|---|---|---|
 | 0 | 1 | 1 | 1 | 1 | 0 | 1 | 0 | 1 | 1 |
 
-b) \(1101010,1101 - 1010,001\)
+b) 1101010,1101 - 1010,001 = 1100000,1011
 
 | 1 | 1 | 0 | 1 | 0 | 1 | 0 | 1 | 1 | 0 | 1 |
 |---|---|---|---|---|---|---|---|---|---|---|
 |---|---|---|---|---|---|---|---|---|---|-|
-| 0 | 0 | 0 | 0 | 0 | 1 | 0 | 1 | 0 | 0 | 0 | 1 |
-|---|---|---|---|---|---|---|---|---|---|---|---|
-| 0 | 1 | 1 | 1 | 1 | 0 | 1 | 0 | 1 | 1 | 1 | 1 |
+| 0 | 0 | 0 | 1 | 0 | 1 | 0 | 0 | 0 | 1 | 0 |
+|---|---|---|---|---|---|---|---|---|---|---|
+| 1 | 1 | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 1 | 1 |
 
-c) \(110110 \times 1010\)
+c) 110110 * 1010 = 1000011100
 
-d) \(10001001 \div 1010\)
+| 0 | 0 | 0 | 0 | 0 | 1 | 1 | 0 | 1 | 1 | 0 |
+|---|---|---|---|---|---|---|---|---|---|---|
+|---|---|---|---|---|---|---|---|---|---| X |
+| 0 | 0 | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 1 | 0 |
+|---|---|---|---|---|---|---|---|---|---|---|
+| 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| 0 | 0 | 0 | 0 | 1 | 1 | 0 | 1 | 1 | 0 | - |
+| 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | - | - |
+| 0 | 0 | 1 | 1 | 0 | 1 | 1 | 0 | - | - | - |
+|---|---|---|---|---|---|---|---|---|---|---|
+| 0 | 1 | 0 | 0 | 0 | 0 | 1 | 1 | 1 | 0 | 0 |
 
-e) \(10001000100 \div 101010\)
+d) 10001001 \ 1010
+
+Sin decimal =  1101<sub>2</sub> con 111<sub>2</sub> de Resto
+
+<img width="702" height="577" alt="image" src="https://github.com/user-attachments/assets/bdef2cf0-0a21-4c1d-b3d3-9ee2bcefce9c" />
+
+Con decimal = 1101,101100...
+
+<img width="525" height="677" alt="image" src="https://github.com/user-attachments/assets/87899cb0-0557-4940-99e8-c0b3561eec53" />
+
+e) 10001000100 \ 101010
+
+Resultado = 11010<sub>2</sub>
+
+<img width="580" height="487" alt="image" src="https://github.com/user-attachments/assets/634f06fa-3b91-4c4e-91cc-82b026afab4e" />
+
 
 ---
 
 ## 4. Comandos de red en Windows y análisis de protocolos
 
-1. Ejecuta, desde el símbolo del sistema de Windows, el comando `ipconfig`.
+1. Ejecuta, desde el símbolo del sistema de Windows, el comando `ipconfig`.  
 2. ¿Qué información vemos?
+   
+   Vemos la configuración de nuestra red y de que manera estamos conectados.
+   
 3. Realiza las transformaciones y operaciones indicadas: AND entre la dirección IP y la máscara de red.
+   
+  192.168.1.25 AND 255.255.255.0 = 192.168.1.0
+   
 4. ¿Qué resultado obtenemos?
+   
+ La dirección de red
+
 5. Vamos más allá: ejecuta `ipconfig /all`.
+   
 6. ¿Dónde vemos representación hexadecimal?
+
+   En la dirección física
+   
 7. ¿Cuántos bits tiene la dirección MAC?
-8. ¿Puedes ver una dirección IPv6?
-9. ¿Cuántos bits tiene? ¿En qué formato está?
-10. Vamos a instalar una herramienta fundamental en redes: un analizador de protocolos.
-11. ¿Cómo se observa la información en pantalla en Wireshark? ¿En qué formatos?
+
+48 Bits
+
+11. ¿Puedes ver una dirección IPv6?
+   
+13. ¿Cuántos bits tiene? ¿En qué formato está?
+ Hexadecimal, 128 Bits
+14. Vamos a instalar una herramienta fundamental en redes: un analizador de protocolos.
+
+Permite capturar y examinar los paquetes que circulan por la red
+
+16. ¿Cómo se observa la información en pantalla en Wireshark? ¿En qué formatos?
+
+En Hexadecimal
 
 ---
 
@@ -190,7 +238,7 @@ Al configurar una subred, te asignan la máscara `255.255.255.192`.
 
 ¿Cuántos bits de host se han utilizado para esta máscara?
 
-- A. 2 bits
+- A. 2 bits  :white_check_mark:
 - B. 8 bits
 - C. 6 bits
 - D. 4 bits
@@ -203,7 +251,7 @@ En un servidor Linux, aplicas el comando `chmod 750` a un directorio crítico.
 
 - A. Ningún permiso
 - B. Lectura, escritura y ejecución
-- C. Lectura y ejecución
+- C. Lectura y ejecución :white_check_mark: 
 - D. Solo lectura
 
 ### Pregunta 3. EtherType
@@ -212,7 +260,7 @@ Al analizar una trama de red, el campo EtherType muestra el valor hexadecimal `0
 
 ¿A qué sistema de numeración pertenece este valor para identificar protocolos de red?
 
-- A. Base 16
+- A. Base 16 :white_check_mark:
 - B. Base 2
 - C. Base 8
 - D. Base 10
@@ -223,7 +271,7 @@ Si necesitas configurar una máscara comodín (*wildcard mask*) en ACL de router
 
 - A. `255.255.255.255`
 - B. `255.0.0.0`
-- C. `0.0.0.255`
+- C. `0.0.0.255` :white_check_mark:
 - D. `0.0.255.255`
 
 ### Pregunta 5. Dirección MAC
@@ -232,8 +280,8 @@ En una dirección MAC como `00:1A:2B:3C:4D:5E`, ¿cuántos bits totales componen
 
 - A. 128 bits
 - B. 32 bits
-- C. 64 bits
-- D. 48 bits
+- C. 64 bits 
+- D. 48 bits :white_check_mark:
 
 ### Pregunta 6. Permisos octales y bit sticky
 
@@ -242,7 +290,7 @@ Al auditar un archivo o directorio en Linux, encuentras unos permisos escritos e
 ¿Qué valor binario corresponde exactamente al dígito `1` inicial?
 
 - A. `010`
-- B. `001`
+- B. `001`:white_check_mark:
 - C. `100`
 - D. `111`
 
@@ -251,7 +299,7 @@ Al auditar un archivo o directorio en Linux, encuentras unos permisos escritos e
 Si una subred IP tiene una máscara con CIDR `/28`, ¿cuántos bits están reservados exclusivamente para identificar hosts dentro de dicha subred?
 
 - A. 4 bits
-- B. 8 bits
+- B. 8 bits :white_check_mark:
 - C. 28 bits
 - D. 12 bits
 
@@ -264,7 +312,7 @@ En la resolución de problemas de arranque o volcados de memoria (*dumps*), obse
 - A. 12
 - B. 16
 - C. 15
-- D. 10
+- D. 10 :white_check_mark:
 
 ### Pregunta 9. Operaciones lógicas con direcciones IP
 
@@ -274,7 +322,7 @@ Al auditar configuraciones de red, necesitas comprobar si una IP pertenece a una
 
 - A. XOR lógico
 - B. OR lógico
-- C. AND lógico
+- C. AND lógico :white_check_mark:
 - D. NOT lógico
 
 ### Pregunta 10. Permisos restrictivos en Linux
@@ -283,5 +331,5 @@ Si configuras un servicio de red y necesitas asignar permisos restrictivos en Li
 
 - A. `600`
 - B. `755`
-- C. `700`
+- C. `700` :white_check_mark:
 - D. `770`
