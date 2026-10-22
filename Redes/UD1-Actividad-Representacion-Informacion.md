@@ -238,9 +238,9 @@ Al configurar una subred, te asignan la máscara `255.255.255.192`.
 
 ¿Cuántos bits de host se han utilizado para esta máscara?
 
-- A. 2 bits  :white_check_mark:
+- A. 2 bits  
 - B. 8 bits
-- C. 6 bits
+- C. 6 bits :white_check_mark:
 - D. 4 bits
 
 ### Pregunta 2. Permisos en Linux
